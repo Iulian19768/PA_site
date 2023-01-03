@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+    {%load static%}
+	<link rel="stylesheet" href="{%static 'register_&_login.css'%}">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="title">
+      Logare
+    </div>
+    {% if messages %}
+      {% for message in messages %}
+        <h2 style="color: firebrick;">{{message}}</h2>
+      {% endfor %}
+    {% endif %}
+
+    <form action="" method="POST">{% csrf_token %}
+
+      <div class="form" >
+
+       <div class="inputfield">
+          <label>Nume Utilizator </label>
+          <input type="text" class="input" name = "User_name">
+       </div>
+
+        <div class="inputfield">
+          <label>Parola</label>
+          <input type="password" class="input" name = "Password">
+        </div>
+
+       <div class="inputfield">
+         <input type="submit" value="Autentificare" class="btn">
+       </div>
+       <p class="para-2">
+        Nu aveti un cont? <a href="register">Inregistrati-va aici</a>
+      </p>
+    </form>
+    
+    </div>
+</div>	
+	
+</body>
+</html>
+

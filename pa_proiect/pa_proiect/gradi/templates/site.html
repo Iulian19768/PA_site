@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <Title>Gradinita nr. 35</Title>
+    <link rel="stylesheet" href="style.css">
+
+    <div class="banner">
+        
+    <div class ="navbar">
+        <img src="logo.png" class="logo">
+        <ul>
+            <li><a href="">Acasa</a></li>
+            <li><a href="#Despre">Despre</a></li>
+            <li><a href="#Imagini">Imagini</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#etc">etc</a></li>
+        </ul>
+    </div>
+    </div>
+
+    <section id="Despre">
+        <div class="container">
+            <div class="image">
+              <img src="Colaj.jpeg" width="500" height="350">
+            </div>
+            <div class="text">
+                <h1>Despre </h1>
+                <h2>Gradinita nr. 35</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                 It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                 It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                 and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        
+    </section>
+
+
+    <section id="Imagini">
+        <div class="product">
+            <div class="product-small-img">
+
+                <img src="1.JPG" onclick="myFunction(this)">
+                <img src="2.JPG" onclick="myFunction(this)">
+                <img src="3.JPG" onclick="myFunction(this)">
+                <img src="4.JPG" onclick="myFunction(this)">
+                <img src="5.JPG" onclick="myFunction(this)">
+            </div>
+
+            <div class="img-container">
+                <img id="imageBox" src="1.JPG">
+            </div>
+        </div>
+
+        <script>
+            function myFunction(smallImg)
+            {
+                var fullImg = document.getElementById("imageBox");
+                fullImg.src = smallImg.src;
+            }
+
+        </script>
+    </section>
+
+    <section id="Contact">
+        <h1>Contact</h1>
+    </section>
+
+    <section id="etc">
+        <h1>etc</h1>
+    </section>
+
+</head>
+<body>
+<section id="Acasa">
+    <div class="content">
+        <h1>Bine ati venit!</h1>
+        <p>Gradinita nr. 35 va asteapta!</p> 
+    </section>
+</div>
+
+</body>
+</html>

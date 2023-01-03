@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+  {%load static%}
+  
+	<link rel="stylesheet" href="{%static 'register_&_login.css'%}">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="title">
+      Inregistrare
+    </div>
+    {% if messages %}
+      {% for message in messages %}
+        <h2 style="color: firebrick;">{{message}}</h2>
+      {% endfor %}
+    {% endif %}
+
+    <form action="" method="POST">{% csrf_token%}
+
+      <div class="form" >
+        
+        <div class="inputfield">
+          <label>Nume </label>
+          <input type="text" class="input" name = "First_name">
+       </div>
+       <div class="inputfield">
+          <label>Prenume </label>
+          <input type="text" class="input" name = "Last_name">
+       </div>
+       <div class="inputfield">
+          <label>Nume Utilizator </label>
+          <input type="text" class="input" name = "User_name">
+       </div>
+       
+        <div class="inputfield">
+          <label>Adresa Email</label>
+          <input type="email" class="input" name = "Email">
+        </div>
+        <div class="inputfield">
+          <label>Parola</label>
+          <input type="password" class="input" name = "Password">
+        </div>
+        <div class="inputfield">
+          <label>Repeta Parola</label>
+          <input type="password" class="input" name = "password2">
+        </div>
+        
+       <div class="inputfield terms">
+           <label class="check">
+             <input type="checkbox">
+             <span class="checkmark"></span>
+           </label>
+           <p>Accept si sunt de acord cu termenii de conditie</p>
+        </div> 
+       <div class="inputfield">
+         <input type="submit" value="Inscrie-ma" class="btn">
+       </div>
+       <p class="para-2">
+        Aveti deja un cont? <a href="login">Autentificati-va aici</a>
+      </p>
+    </form>
+    
+    </div>
+</div>	
+	
+</body>
+</html>
+

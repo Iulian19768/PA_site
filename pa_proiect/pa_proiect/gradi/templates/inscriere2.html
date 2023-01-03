@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+  {%load static%}
+	<link rel="stylesheet" href="{%static 'formular.css'%}">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="title">
+      Inscriere
+    </div>
+
+    <form action="" method="POST">{% csrf_token%}
+
+      <div class="form" >
+        
+        <div class="inputfield">
+           <label>Nume </label>
+           <input type="text" class="input" name = "Nume">
+        </div>  
+         <div class="inputfield">
+           <label>Prenume</label>
+           <input type="text" class="input" name = "Prenume">
+        </div>  
+        
+         <div class="inputfield">
+           <label>Sex</label>
+           
+           <input type="text" class="input" name = "Sex">
+           
+        </div> 
+         <div class="inputfield">
+           <label>Adresa de email</label>
+           <input type="text" class="input" name = "email">
+        </div> 
+       <div class="inputfield">
+           <label>Numar de tel.</label>
+           <input type="text" class="input" name = "nr_tel">
+        </div> 
+       <div class="inputfield">
+           <label>Adresa</label>
+           <input type="text" class="input" name = "Adresa">
+        </div> 
+       <div class="inputfield">
+           <label>Cod Postal</label>
+           <input type="text" class="input" name = "cod_postal">
+        </div> 
+       <div class="inputfield terms">
+           <label class="check">
+             <input type="checkbox">
+             <span class="checkmark"></span>
+           </label>
+           <p>Accept si sunt de acord cu termenii de conditie</p>
+        </div> 
+       <div class="inputfield">
+         <input type="submit" value="Inscrie-ma" class="btn">
+       </div>
+    </form>
+    <button><a href="{% url 'logout' %}">Logout</a></button>
+    
+    </div>
+</div>	
+	
+</body>
+</html>
+

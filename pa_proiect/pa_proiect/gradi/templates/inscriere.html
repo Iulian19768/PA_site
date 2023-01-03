@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+  {%load static%}
+	<link rel="stylesheet" href="{%static 'formular.css'%}">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="title">
+      Inscriere
+    </div>
+
+    <form action="" method="POST">{% csrf_token%}
+
+      <div class="form" >
+        
+        <div class="inputfield">
+          <label>Nume-Prenume parinte </label>
+          <input type="text" class="input" name = "NumeParinte">
+       </div>
+       <div class="inputfield">
+          <label>Adresa </label>
+          <input type="text" class="input" name = "Adresa">
+       </div>
+       <div class="inputfield">
+          <label>Cod Postal </label>
+          <input type="text" class="input" name = "CodPostal">
+       </div>
+       <div class="inputfield">
+          <label>Numar de Telefon </label>
+          <input type="text" class="input" name = "NrTel">
+        </div>
+        <div class="inputfield">
+          <label>Adresa Email</label>
+          <input type="text" class="input" name = "Email">
+        </div>
+        <div class="inputfield">
+          <label>CNP-ul parintelui</label>
+          <input type="text" class="input" name = "Cnpparinte">
+        </div>
+        <div class="inputfield">
+          <label>Nume-Prenume copil</label>
+          <input type="text" class="input" name = "NumeCopil">
+        </div>
+        <div class="inputfield">
+          <label>Initiala tatalui</label>
+          <input type="text" class="input" name = "InitialaTata">
+        </div>
+        <div class="inputfield">
+          <label>CNP copil</label>
+          <input type="text" class="input" name = "Cnpcopil">
+        </div>
+       <div class="inputfield terms">
+           <label class="check">
+             <input type="checkbox">
+             <span class="checkmark"></span>
+           </label>
+           <p>Accept si sunt de acord cu termenii de conditie</p>
+        </div> 
+       <div class="inputfield">
+         <input type="submit" value="Inscrie-ma" class="btn">
+       </div>
+    </form>
+    <button><a href="{% url 'logout' %}">Logout</a></button>
+    
+    </div>
+</div>	
+	
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="contact-box">
+            <div class="left"></div>
+            <div class="right">
+            <h2>Add Book</h2>
+            <form action="" method="POST">{% csrf_token%}
+            <input type="text" class="field" placeholder="Author" name="author">
+            <input type="text" class="field" placeholder="Book Title" name="title">
+            <textarea placeholder="Book Description" class="field" name="desc"></textarea>
+            <button type="submit" class="btn">Add</button>
+            </form> 
+            </div>
+            </div>
+            </div>
+    </body>
+</html>
